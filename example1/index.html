@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+		<title>Example</title>
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	</head>
+	<body>
+		<div class="Welcome" id="Welcome">
+			<div class="width-wrapper">
+				<p class="Welcome__Text">Start selling your products or buy them from anywhere!
+				</p>
+				<button class="Welcome__Cancel" id="Welcome__Cancel">&#10006;</button>
+			</div>
+		</div>
+
+		<header class = "Header">
+			<div class="width-wrapper">
+				<div class="Language">
+					<img alt="USA" src="./usa.png" class="Language__Img">
+					<p class="Language__Text text-transform">USD</p>
+					<div class="Language__Arrow"></div>
+				</div>
+				<img alt="BONFIRE" src="./logo.png" class="Logo">
+				<a href="" class="Cart"><p class="Cart__Text">Cart (3)</p></a>
+			</div>
+			<hr style="margin-top: 27px" class="Line">
+			<div class="width-wrapper">
+				<div class="Bar" id="Bar">&#8801;</div>
+				<nav class="Nav" id = "Nav">
+					<ul>
+						<li style="margin-right: 53px;">
+							<a href="./index.html">Home</a>
+							<button class="Nav__Close" id = "Nav__Close">&#10006;</button>
+						</li>
+						<li style="margin-right: 50px;" class="Nav__Submenu">
+							Men<div class="Nav__Arrow"></div>
+							<ul>
+								<li><a href="shoes">shoes</a></li>
+								<li><a href="jackets">jackets</a></li>
+								<li><a href="jeans">jeans</a></li>
+							</ul>
+						</li>
+						<li style="margin-right: 47px;" class="Nav__Submenu">
+							Women<div class="Nav__Arrow"></div>
+							<ul class="Nav__Submenu">
+								<li><a href="shoes">shoes</a></li>
+								<li><a href="jackets">jackets</a></li>
+								<li><a href="jeans">jeans</a></li>
+							</ul>
+						</li>
+						<li style="margin-right: 53px;"><a href="Lookbook">Lookbook</a></li>
+						<li style="margin-right: 52px;"><a href="About">About</a></li>
+						<li><a href="Blog">Blog</a></li>
+					</ul>
+				</nav>
+				<a href="" class="Wishlist">&#9825;</a>
+				<form class="Search" id = "Search">
+					<img class="Search__Img" src="./search.png">
+					<input class="Search__Input" type="text" name="search">
+				</form>
+			</div>
+			<hr style="margin-top: 19px" class="Line">
+		</header>
+
+		<div class = "MainPanel">
+			<div class="width-wrapper">
+				<div class="LeftPanel">
+					<div class="BigImage"></div>
+					<div class="Thumbnails">
+						<div style="margin-right: 22px;" class="SmallImage"></div>
+						<div style="margin-right: 23px;" class="SmallImage"></div>
+						<div style="margin-right: 22px;" class="SmallImage"></div>
+						<div class="SmallImage"></div>
+					</div>
+				</div>
+				<div class="RightPanel">
+					<p class="BackLink">
+						<span class="Backlink__Text">&lsaquo; Back to</span>
+						<a href="" ><span class="Backlink__Text">Woman</span></a>
+					</p>
+
+					<h2 class="ProductName">The Atelier Tailored Coat</h2>
+					<p class="Review">
+						<a href="">
+							<span class="Review__Star Review__Star__Color_Yellow">★</span>
+							<span class="Review__Star Review__Star__Color_Yellow">★</span>
+							<span class="Review__Star Review__Star__Color_Yellow">★</span>
+							<span class="Review__Star Review__Star__Color_Yellow">★</span>
+							<span class="Review__Star">★</span>
+							<span class="Review__Number">3 Review(s)</span>
+						</a>
+						<span class="Review__Border">|</span>
+						<a href="" class="Review__Add">Add a Review</a>
+					</p>
+					<p class="Price">$499.00</p>
+					<p class="Availability">Availability : <span class="blue font-weight_normal">In stock</span></p>
+					<p class="ProductCode">Product Code : <span class="blue font-weight_normal">#4657</span></p>
+					<p class="Tags">Tags : <span class="blue font-weight_normal">Fashion, Hood, Classic</span></p>
+					<p class="Description">
+						Sleek, polished, and boasting an impeccably modern fit, this blue, 2-but-ton Lazio suit features a notch lapel, flap pockets, and accompanying flat front trousers—all in pure wool by Vitale Barberis Canonico.
+					</p>
+					<ul class="Properties">
+						<li>Dark blue suit for a tone-on-tone look</li>
+						<li>Regular fit</li>
+						<li>100% Cotton</li>
+						<li>Free shipping with 4 days delivery</li>
+					</ul>
+
+					<form class="Buy" id = "Buy">
+						<div class="Buy__Color">
+							<h3>Color</h3>
+							<select name="color">
+								<option value="value1">Select Color</option>
+								<option value="value1">color 1</option> 
+  								<option value="value2">color 2</option>
+  								<option value="value3">color 3</option>
+  							</select>
+						</div>
+						<div class="Buy__Size">
+							<h3>Size</h3>
+							<select name="size">
+								<option value="value1">Select Size</option>
+								<option value="value1">1</option> 
+  								<option value="value2">2</option>
+  								<option value="value3">3</option>
+  							</select>
+						</div>
+						<div class="Buy__QTY">
+							<h3>QTY</h3>
+							<input type="number" name="qty">
+						</div>
+						<br>
+						<a class="Buy__Clear" href="">Clear selection</a><br>
+
+						<input id = "AddToCart" type="submit" class="Buy__AddToCart" value="Add to cart" name="addtocart">
+						<input id = "AddToWishlist" type="submit" class="Buy__AddToWishlist" value="Add to Wishlist" name="addtowishlist">
+					</form>
+
+					<hr class="Line" style="margin-top: 38px;">
+					<p class="Share">Share this</p>
+					<div class="Facebook">
+						<img src="./facebook_like.png">
+						<img src="./facebook_share.png">
+						<img src="./facebook_count.png">
+					</div>
+					<div class="Twitter">
+						<img src="./twitter_tweet.png">
+						<img src="./twitter_count.png">
+					</div>
+					<div class="Pinterest">
+						<img src="./pinterest_pinit.png">
+						<img src="./pinterest_count.png">
+					</div>
+					<hr class="Line" style="margin-top: 12px;">
+				</div>
+			</div>
+		</div>
+		<footer class = "Footer">
+			<div class="width-wrapper">
+				<p class="Footer__Text">Made with Love & Coffee © 2015 Design Lazy. All Rights Reserved.</p>
+			</div>
+		</footer>
+		<script type="text/javascript" src="./script.js"></script>
+	</body>
+</html>
