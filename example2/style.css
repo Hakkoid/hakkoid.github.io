@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: "Ubuntu";
 }
 
 ul{
@@ -20,7 +21,7 @@ a{
 }
 
 .header {
-	position: fixed;
+	position: relative;
 	width: 100%;
 	z-index: 10;
 	background-color: rgb(100, 140, 255);
@@ -30,12 +31,19 @@ a{
 	display: inline-block;
 	font-size: 1.5em;
 	margin-left: 2px;
-	font-family: "Ubuntu";
 	color: rgb(255, 255, 255);
 	font-weight: bold;
 	text-transform: uppercase;
 	line-height: 3.8;
 	text-align: left;
+}
+
+.logo_color_orange{
+	color: #fc6a42;
+}
+
+.logo_color_blue{
+	color: #648cff;
 }
 
 .navigation{
@@ -59,12 +67,11 @@ a{
 	display: inline-block;
 	font-size: 1.15em;
 	color: rgb(225, 225, 225);
-	font-family: "Ubuntu";
 	line-height: 1.2;
 	text-align: left;
 	vertical-align: bottom;
-    margin-bottom: 2px;
-    font-weight: 300;
+	margin-bottom: 2px;
+	font-weight: 300;
 }
 
 .navigation__li_selected{
@@ -73,9 +80,9 @@ a{
 
 .social-links{
 	display: inline-block;
-    vertical-align: top;
-    margin-top: 33px;
-    margin-left: 145px;
+	vertical-align: top;
+	margin-top: 33px;
+	margin-left: 145px;
 }
 
 .social-links>a:nth-child(2) {
@@ -85,7 +92,7 @@ a{
 .social-links>a:nth-child(3) {
 	position: relative;
 	left: 30px;
-    top: -2px;
+	top: -2px;
 }
 
 
@@ -101,32 +108,29 @@ a{
 .first-screen__description{
 	vertical-align: top;
 	margin-top: 288px;
-    width: 500px;
-    display: inline-block;
+	width: 500px;
+	display: inline-block;
 }
 
 .first-screen__description>h2{
-    font-size: 3.76em;
-    font-family: "Ubuntu";
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    line-height: 1.2;
+	font-size: 3.76em;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	line-height: 1.2;
 }
 
 .first-screen__description>p{
-    max-width: 449px;
-    font-size: 18px;
-    font-family: "Ubuntu";
-    color: rgb(255, 255, 255);
-    line-height: 1.667;
-    margin-top: 31px;
-    margin-left: 1px;
+	max-width: 449px;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	line-height: 1.667;
+	margin-top: 31px;
+	margin-left: 1px;
 }
 
 .first-screen__description>a{
 	display: inline-block;
 	font-size: 1.125em;
-	font-family: "Ubuntu";
 	color: rgb(255, 255, 255);
 	font-weight: bold;
 	line-height: 1.2;
@@ -161,63 +165,60 @@ a{
 }
 
 .first-screen__phone>img{
-    margin-left: 34px;
+	margin-left: 34px;
 }
 
 
 .first-screen__sunny {
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 295px;
-    border-radius: 50%;
-    background-color: rgb(252, 106, 66);
-    width: 90px;
-    height: 90px;
-    font-size: 1.13em;
-    font-family: "Ubuntu";
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 4.9;
-    letter-spacing: -0.05em;
-    text-align: center;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 295px;
+	border-radius: 50%;
+	background-color: rgb(252, 106, 66);
+	width: 90px;
+	height: 90px;
+	font-size: 1.13em;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 4.9;
+	letter-spacing: -0.05em;
+	text-align: center;
 }
 
 .firsts-creen__degree{
 	display: block;
-    position: absolute;
-    left: 437px;
-    top: 85px;
-    font-size: 1.27em;
-    font-family: "Ubuntu";
-    color: rgb(108, 163, 255);
-    font-weight: 700;
-    line-height: 2.8;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    width: 57px;
-    height: 57px;
-    text-align: center;
-    box-sizing: border-box;
-    padding-left: 7px;
+	position: absolute;
+	left: 437px;
+	top: 85px;
+	font-size: 1.27em;
+	color: rgb(108, 163, 255);
+	font-weight: 700;
+	line-height: 2.8;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+	width: 57px;
+	height: 57px;
+	text-align: center;
+	box-sizing: border-box;
+	padding-left: 7px;
 }
 
 .firsts-creen__london{
 	border-radius: 50%;
-    background-color: rgb(68, 102, 201);
-    position: absolute;
-    left: 462px;
-    top: 267px;
-    width: 90px;
-    height: 90px;
-    font-size: 1em;
-    letter-spacing: -0.04em;
-    font-family: "Ubuntu";
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 5.8;
-    text-align: center;
+	background-color: rgb(68, 102, 201);
+	position: absolute;
+	left: 462px;
+	top: 267px;
+	width: 90px;
+	height: 90px;
+	font-size: 1em;
+	letter-spacing: -0.04em;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 5.8;
+	text-align: center;
 }
 
 .firsts-creen__rio{
@@ -229,7 +230,6 @@ a{
 	width: 55px;
 	height: 55px;
 	font-size: 1.12em;
-	font-family: "Ubuntu";
 	color: rgb(100, 140, 255);
 	font-weight: bold;
 	text-transform: uppercase;
@@ -239,16 +239,16 @@ a{
 
 .first-screen__down{
 	display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    box-sizing: border-box;
-    padding: 14px 20px;
-    margin-top: 32px;
-    width: 49px;
-    height: 49px;
-    box-shadow: 0 9px 28px rgba(0,0,0,0.1);
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 50%;
+	background-color: rgb(255, 255, 255);
+	box-sizing: border-box;
+	padding: 14px 20px;
+	margin-top: 32px;
+	width: 49px;
+	height: 49px;
+	box-shadow: 0 9px 28px rgba(0,0,0,0.1);
 }
 
 .features{
@@ -257,18 +257,16 @@ a{
 
 .title{
 	font-size: 2.25em;
-	font-family: "Ubuntu";
-    color: rgb(100, 140, 255);
-    font-weight: bold;
-    text-transform: uppercase;
-    line-height: 1.2;
-    text-align: center;
-    line-height: 45px;
+	color: rgb(100, 140, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.2;
+	text-align: center;
+	line-height: 45px;
 }
 
 .subtitle{
 	font-size: 0.5em;
-	font-family: "Ubuntu";
 	color: rgb(153, 153, 153);
 	line-height: 1.2;
 	font-weight: 400;
@@ -290,7 +288,6 @@ a{
 
 .features__description>div>h3{
 	font-size: 24px;
-	font-family: "Ubuntu";
 	color: rgb(53, 56, 84);
 	font-weight: bold;
 	line-height: 1.5;
@@ -301,7 +298,6 @@ a{
 	margin-top: 9px;
 	width: 278px;
 	font-size: 16px;
-	font-family: "Ubuntu";
 	color: rgb(174, 174, 174);
 	line-height: 1.875;
 	text-align: left;
@@ -328,7 +324,7 @@ a{
 
 .widgets__left-arrow{
 	margin-top: 359px;
-    margin-left: 43px;
+	margin-left: 43px;
 	float: left;
 	transform: rotate(180deg);
 }
@@ -353,6 +349,7 @@ a{
 .widgets__images{
 	margin-top: 52px;
     margin-left: 136px;
+    align-self: center;
 	display: inline-block;
 	position: relative;
 	height: 660px;
@@ -535,8 +532,342 @@ a{
 	}
 }
 
+@keyframes widget__image-left-go-to-center_medium{
+	from{
+		z-index: 0;
+		left: 0px;
+		top: 33px;
+		width: 214px;
+	}
+	50%{
+		z-index: 1;
+		left: -50px;
+	}
+	to{
+		z-index: 1;
+		left: 135px;
+		top: 0px;
+		width: 250px;
+	}
+}
+
+@keyframes widget__image-right-go-to-center_medium{
+	from{
+		z-index: 0;
+		left: 315px;
+		top: 33px;
+		width: 214px;
+	}
+	50%{
+		z-index: 1;
+		left: 365px;
+	}
+	to{
+		z-index: 1;
+		left: 135px;
+		top: 0px;
+		width: 250px;
+	}
+}
+
+@keyframes widget__image-left-go-to-right_medium{
+	from{
+		z-index: 0;
+		left: 0px;
+		top: 33px;
+		width: 214px;
+	}
+	to{
+		z-index: 0;
+		left: 315px;
+		top: 33px;
+		width: 214px;
+	}
+}
+
+@keyframes widget__image-right-go-to-left_medium{
+	from{
+		z-index: 0;
+		left: 315px;
+		top: 33px;
+		width: 214px;
+	}
+	to{
+		z-index: 0;
+		left: 0px;
+		top: 33px;
+		width: 214px;
+	}
+}
+
+@keyframes widget__image-center-go-to-left_medium{
+	from{
+		z-index: 1;
+		left: 135px;
+		top: 0px;
+		width: 250px;
+	}
+	50%{
+		z-index: 1;
+		left: -50px;
+	}
+	to{
+		z-index: 0;
+		left: 0px;
+		top: 33px;
+		width: 214px;
+	}
+}
+
+
+@keyframes widget__image-center-go-to-right_medium{
+	from{
+		z-index: 1;
+		left: 135px;
+		top: 0px;
+		width: 250px;
+	}
+	50%{
+		z-index: 1;
+		left: 365px;
+	}
+	to{
+		z-index: 0;
+		left: 315px;
+		top: 33px;
+		width: 214px;
+	}
+}
+
 .screenshots{
     margin-top: 131px;
+}
+
+.cloudy{
+    margin-top: 154px;
+	margin-left: 22px;
+}
+
+.cloudy__description{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 61px;
+}
+
+.cloudy__description>img{
+	margin-top: 123px;
+}
+
+.cloudy__description>img:nth-child(4){
+	margin-top: 37px;
+}
+
+.cloudy__description>h3{
+	margin-top: 29px;
+	font-size: 2.25em;
+	color: rgb(100, 140, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.6;
+}
+
+.cloudy__description>p{
+	margin-top: 15px;
+	font-size: 1.525em;
+	color: rgb(53, 56, 84);
+	line-height: 1.5;
+	width: 495px;
+}
+
+.sunny{
+	margin-top: 182px;
+	margin-left: 4px;
+}
+
+.sunny>img{
+	margin-left: 143px;
+}
+
+.sunny__description{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.sunny__description>img{
+	margin-top: 126px;
+}
+
+.sunny__description>img:nth-child(4){
+	margin-top: 37px;
+}
+
+.sunny__description>h3{
+	margin-top: 29px;
+	font-size: 2.25em;
+	color: rgb(100, 140, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.6;
+}
+
+.sunny__description>p{
+	margin-top: 15px;
+	font-size: 1.515em;
+	color: rgb(53, 56, 84);
+	line-height: 1.5;
+	width: 481px;
+}
+
+.rainy{
+	margin-top: 269px;
+	margin-left: 31px;
+}
+
+.rainy__description{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 61px;
+}
+
+.rainy__description>img{
+	margin-top: 70px;
+}
+
+.rainy__description>img:nth-child(4){
+	margin-top: 37px;
+}
+
+.rainy__description>h3{
+	margin-top: 29px;
+	font-size: 2.25em;
+	color: rgb(100, 140, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.6;
+}
+
+.rainy__description>p{
+	margin-top: 15px;
+	font-size: 1.525em;
+	color: rgb(53, 56, 84);
+	line-height: 1.5;
+	width: 495px;
+}
+
+.reviews{
+	margin-top: 107px;
+}
+
+.reviews>h2{
+	margin-bottom: 129px;
+}
+
+.reviews__review:nth-child(2n+1){
+	margin-left: 37px;
+}
+
+.reviews__review{
+	display: inline-block;
+	margin-left: 1px;
+	width: 559px;
+	margin-bottom: 133px;
+}
+
+.reviews__review>p{
+	quotes: "“" "”";
+}
+
+.reviews__review>p:nth-child(1){
+	font-size: 24px;
+	color: rgb(53, 56, 84);
+	line-height: 1.5;
+}
+
+.reviews__review>p:nth-child(2){
+	font-size: 18px;
+	color: rgb(53, 56, 84);
+	line-height: 1.2;
+	margin-top: 17px;
+}
+
+.reviews__review>p:nth-child(1)::before{
+	margin-left: -7px;
+	margin-bottom: -5px;
+	font-size: 145px;
+	content: open-quote;
+	display: block;
+	color: rgb(100, 140, 255);
+	line-height: 0;
+}
+
+.reviews__review>p:nth-child(2)::after{
+	margin-top: 52px;
+	font-size: 145px;
+	width: 100%;
+	text-align: right;
+	content: close-quote;
+	display: block;
+	line-height: 0;
+	color: rgb(100, 140, 255);
+}
+
+.download{
+	padding-top: 115px;
+	box-sizing: border-box;
+	margin-top: -32px;
+	background-color: rgb(100, 140, 255);
+	background-image: url(download-phone.png);
+	background-repeat:no-repeat;
+	background-position: center;
+	height: 462px;
+}
+
+.download__title{
+	margin-left: 4px;
+	font-size: 36px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+
+.download__description {
+	margin-left: 4px;
+	margin-top: 36px;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+	line-height: 1.2;
+	width: 356px;	
+}
+
+.download__appstore>img{
+	margin-top: 30px;
+	margin-left: 3px;
+}
+
+.download__google-play>img{
+	margin-left: 3px;
+}
+
+.footer{
+	background-color: rgb(53, 56, 84);
+	height: 307px;
+	padding-top: 65px;
+}
+
+.footer__line {
+	background-color: rgb(67, 71, 105);
+	margin-top: 63px;
+	height: 1px;
+	border: none;
+}
+
+.footer__rights{
+	text-align: right;
+	font-size: 16px;
+	color: rgb(86, 91, 135);
+	line-height: 1.35;
+	margin-top: 49px;
 }
 
 @media (max-width: 1192px) {
@@ -547,4 +878,86 @@ a{
 	.navigation{
 		display: none;
 	}
+
+	.widgets__left-arrow{
+    	margin-left: 0px;
+    	margin-top: 248px;
+	}
+
+	.widgets__right-arrow{
+    	margin-right: 0px;
+    	margin-top: 248px;
+	}
+
+	.widgets__images{
+		margin-left: 94px;
+		height: 446px;
+	}
+
+	.widgets__image-left{
+		top: 33px;
+		left: 0px;
+		width: 214px;
+	}
+
+	.widgets__image-center{
+		left: 135px;
+		width: 250px;
+	}
+
+	.widgets__image-right {
+	    width: 214px;
+	    top: 33px;
+	    left: 315px;
+	}
+
+	.widgets__images_left-to-center{
+		animation: widget__image-left-go-to-center_medium 0.5s 1 linear;
+		z-index: 1;
+		left: 135px;
+		top: 0px;
+		width: 250px;
+	}
+
+	.widgets__images_left-to-right{
+		animation: widget__image-left-go-to-right_medium 0.5s 1 linear;
+		z-index: 0;
+		left: 315px;
+		top: 33px;
+		width: 214px;
+	}
+
+	.widgets__images_right-to-center{
+		animation: widget__image-right-go-to-center_medium 0.5s 1 linear;
+		z-index: 1;
+		left: 135px;
+		top: 0px;
+		width: 250px;
+	}
+
+	.widgets__images_right-to-left{
+		animation: widget__image-right-go-to-left_medium 0.5s 1 linear;
+		z-index: 0;
+		left: 0px;
+		top: 33px;
+		width: 214px;
+	}
+
+	.widgets__images_center-to-left{
+		animation: widget__image-center-go-to-left_medium 0.5s 1 linear;
+		z-index: 0;
+		left: 0px;
+		top: 33px;
+		width: 214px;
+	}
+
+	.widgets__images_center-to-right{
+		animation: widget__image-center-go-to-right_medium 0.5s 1 linear;
+		z-index: 0;
+		left: 315px;
+		top: 33px;
+		width: 214px;
+	}
 }
+
+
