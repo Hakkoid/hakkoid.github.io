@@ -781,7 +781,7 @@ a{
 	font-size: 1.12em;
 	color: rgb(255, 255, 255);
 	line-height: 1.2;
-	width: 356px;	
+	max-width: 356px;	
 }
 
 .download__appstore>img{
@@ -836,7 +836,7 @@ a{
 	}
 
 	.social-links{
-		margin-left: 80px;
+		margin-left: 70px;
 	}
 
 	.first-screen{
@@ -854,6 +854,7 @@ a{
 
 	.first-screen__phone{
 		margin-top: 300px;
+		margin-left: 14px;
 	}
 
 	.first-screen__phone>img{
@@ -1038,6 +1039,7 @@ a{
 	}
 
 	.logo>h1{
+		margin-left: 0;
 		width: 100%;
 		text-align: center;
 		display: block;
@@ -1125,7 +1127,7 @@ a{
 	.screenshots__phone{
 		float: none;
 		display: block;
-
+		margin-right: 0 !important;
 	}
 
 	.screenshots__description{
@@ -1136,6 +1138,40 @@ a{
 
 	.footer__rights{
 		text-align: center;
+	}
+
+}
+
+@media (max-width: 360px) {
+	.first-screen__phone{
+		width: 100%;
+	}
+
+	.first-screen__phone>img{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+
+
+	.first-screen__sunny {
+		display: none;
+	}
+
+	.first-screen__degree{
+		display: none;
+	}
+
+	.first-screen__london{
+		display: none;
+	}
+
+	.first-screen__rio{
+		display: none;
+	}
+
+	.download{
+		padding-top: 50px;
 	}
 
 }
