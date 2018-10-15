@@ -1,8 +1,9 @@
 'use strict'
 
-var bar = document.getElementById('bar');
+var bar = document.getElementById('navigation__bar');
 var close = document.getElementById('navigation__close');
 var nav = document.getElementById('navigation__ul');
+var body = document.getElementById('body');
 
 bar.ontouchstart = function(e){
 	e.preventDefault()
@@ -10,11 +11,13 @@ bar.ontouchstart = function(e){
 }
 
 bar.onclick = function (e){
-	nav.classList.add("navigation__ul_full-page")
+	nav.classList.add("navigation__ul_full-page");
+	body.style.overflow = "hidden";
 }
 
 function closeNav(e){
-	nav.classList.remove("navigation__ul_full-page")
+	body.style.overflow = "auto"
+	nav.classList.remove("navigation__ul_full-page");
 }
 
 close.onclick = closeNav;
