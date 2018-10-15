@@ -1,5 +1,37 @@
 'use strict'
 
+var bar = document.getElementById('bar');
+var close = document.getElementById('navigation__close');
+var nav = document.getElementById('navigation__ul');
+
+bar.ontouchstart = function(e){
+	e.preventDefault()
+	this.onclick()
+}
+
+bar.onclick = function (e){
+	nav.classList.add("navigation__ul_full-page")
+}
+
+function closeNav(e){
+	nav.classList.remove("navigation__ul_full-page")
+}
+
+close.onclick = closeNav;
+
+close.ontouchstart = function(e){
+	e.preventDefault();
+	this.onclick()
+}
+
+for (var i = 0; i < nav.children.length; i++) {
+
+	nav.children[i].onclick = closeNav;
+
+}
+
+
+
 var widgets = {};
 
 widgets.state = {

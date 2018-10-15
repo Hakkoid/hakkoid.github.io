@@ -12,12 +12,13 @@
 		<div class="width-wrapper">
 			<a href="" class="logo"><h1>Fun Weather.</h1></a>
 			<nav class="navigation navigation_mobile">
-				<div>&#8801;</div>
-				<ul class="navigation__ul">
+				<div id="bar">&#8801;</div>
+				<ul class="navigation__ul" id="navigation__ul">
+					<button class="navigation__close" id="navigation__close">&times;</button>
 					<li class="navigation__li navigation__li_selected"><a href="#">Home</a></li>
 					<li class="navigation__li"><a href="#features">Features</a></li>
-					<li class="navigation__li"><a href="#">Reviews</a></li>
-					<li class="navigation__li"><a href="#">Download</a></li>
+					<li class="navigation__li"><a href="#reviews">Reviews</a></li>
+					<li class="navigation__li"><a href="#download">Download</a></li>
 				</ul>
 			</nav>
 			<div class="social-links">
@@ -32,17 +33,17 @@
 			<div class="first-screen__description">
 				<h2>Get the most fun  weather app</h2>
 				<p>Simple, nice and user-friendly application of the weather. Only useful information</p>
-				<a href="#">Download</a>
+				<a href="#download">Download</a>
 				<a href="#features">Features</a>
 			</div>
 			<div class="first-screen__phone">
-				<a href="#" class="first-screen__sunny">SUNNY</a>
+				<a href="#sunny" class="first-screen__sunny">SUNNY</a>
 				<img src="firstscreen__phone.png" alt="firstscreen">
-				<a href="#" class="first-screen__degree">9˚</a>
-				<a href="#" class="first-screen__london">London</a>
-				<a href="#" class="first-screen__rio">RIO</a>
+				<a href="#london" class="first-screen__degree">9˚</a>
+				<a href="#london" class="first-screen__london">London</a>
+				<a href="#sunny" class="first-screen__rio">RIO</a>
 			</div>
-			<a href="" class="first-screen__down"><img src="scroll-down.png" alt="down"></a>
+			<a href="#features" class="first-screen__down"><img src="scroll-down.png" alt="down"></a>
 		</div>
 	</div>
 	<div class="features width-wrapper" id="features">
@@ -99,7 +100,7 @@
 				<img src="properties.png" alt="properties">
 			</div>
 		</div>
-		<div class="screenshots__screen">
+		<div class="screenshots__screen" id="sunny">
 			<img src="sunny-phone.png" alt="sunny-phone" class="screenshots__phone screenshots__phone_right">
 			<div class="screenshots__description screenshots__description_left">
 				<img src="sunny.png" alt="sunny">
@@ -108,7 +109,7 @@
 				<img src="properties.png" alt="properties">
 			</div>
 		</div>
-		<div class="screenshots__screen">
+		<div class="screenshots__screen" id="london">
 			<img src="rainy-phone.png" alt="rainy-phone" class="screenshots__phone">
 			<div class="screenshots__description">
 				<img src="rainy.png" alt="rainy">
@@ -118,7 +119,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="reviews width-wrapper">
+	<div class="reviews width-wrapper" id="reviews">
 		<h2 class="title">
 			What people are saying<br>
 			<span class="subtitle">Reviews</span>
@@ -140,7 +141,7 @@
 			<p>Abraham Lincoln</p>
 		</div>
 	</div>
-	<div class="download">
+	<div class="download" id="download">
 		<div class="width-wrapper">
 			<h2 class="download__title">How Download the app?</h2>
 			<p class="download__description">Just download the app from the store. Simple, nice and user-friendly application of the weather. Only relevant and useful information.</p>
