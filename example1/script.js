@@ -32,18 +32,24 @@ function touchClick(e){
 
 function openBar(e){
 	document.getElementById("Nav").classList.add("Nav__visible");
+	body.style.overflow = "hidden";
 }
 
 function closeBar(e){
 	document.getElementById("Nav").classList.remove("Nav__visible");
+	body.style.overflow = "auto";
 }
 
 
 
-document.getElementById("Bar").ontouchstart = touchClick;
-document.getElementById("Bar").onclick = openBar;
-document.getElementById("Nav__Close").ontouchstart = touchClick;
-document.getElementById("Nav__Close").onclick = closeBar;
+var bar = document.getElementById("Bar");
+var close = document.getElementById("Nav__Close");
+var body =  document.getElementById("body");
+
+bar.ontouchstart = touchClick;
+bar.onclick = openBar;
+close.ontouchstart = touchClick;
+close.onclick = closeBar;
 
 function closeWelcome(e) {
 	welcome = document.getElementById("Welcome");

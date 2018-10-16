@@ -524,6 +524,7 @@ li {
 
   .Nav {
     margin-left: 10px;
+    overflow: auto;
   }
 
   .Wishlist {
@@ -543,6 +544,7 @@ li {
     max-width: 100%;
   }
 }
+
 .Share {
   margin-top: 11px;
   font-size: 12px;
@@ -668,7 +670,7 @@ li {
 
   .Nav > ul > li {
     display: block;
-    font-size: 15px;
+    font-size: 25px;
     margin-top: 4px;
   }
 
