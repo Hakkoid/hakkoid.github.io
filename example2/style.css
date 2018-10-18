@@ -56,9 +56,9 @@ a{
 	display: none;
 }
 
-.navigation_mobile>button{
+.navigation__bar{
+	float: left;
 	border: none;
-	position: fixed;
 	line-height: 0.9;
 	padding: 1px 8px 3px 8px;
 	font-size: 3em;
@@ -66,46 +66,31 @@ a{
 	font-weight: 700;
 	background-color: rgb(100, 140, 255);
 }
-
+	
 .navigation__close{
 	display: none;
-}
-
-.navigation__close{
 	width: auto !important;
 	float: right;
 	background-color: transparent;
-	font-size: 3em !important;
+	font-size: 4em !important;
 	line-height: 0.4;
 	border: none;
 	color: rgb(255, 255, 255);
-	padding-right: 5px ;
+	margin-right: 4px;
+    margin-top: 7px;
 }
 
-.navigation__ul_full-page{
-	display: block !important;
-	width: 100%;
-	height: 100%;
-	background-color: rgb(100, 140, 255);
-	position: fixed;
-}
 
-.navigation__ul_full-page>li{
-	font-size: 2em;
-	display: block;
-	width: 137px;
-	margin: 10px auto !important;
-}
 
-.navigation__li:nth-child(2) {
+.navigation__li:nth-child(1) {
 	margin-right: 75px;
 }
 
-.navigation__li:nth-child(3) {
+.navigation__li:nth-child(2) {
 	margin-right: 102px;
 }
 
-.navigation__li:nth-child(4) {
+.navigation__li:nth-child(3) {
 	margin-right: 84px;
 }
 
@@ -865,15 +850,15 @@ a{
 		margin-left: 50px;
 	}
 
+	.navigation__li:nth-child(1) {
+		margin-right: 10px;
+	}
+
 	.navigation__li:nth-child(2) {
 		margin-right: 10px;
 	}
 
 	.navigation__li:nth-child(3) {
-		margin-right: 10px;
-	}
-
-	.navigation__li:nth-child(4) {
 		margin-right: 10px;
 	}
 
@@ -1101,7 +1086,7 @@ a{
 		overflow: auto;
 	}
 
-	.navigation_mobile>button{
+	.navigation_mobile>.navigation__bar{
 		display: block;
 	}
 
@@ -1111,6 +1096,29 @@ a{
 
 	.navigation__close{
 		display: block;
+	}
+
+	.navigation_full-page{
+		display: block !important;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(100, 140, 255);
+	}
+
+	.navigation_full-page>ul{
+		display: block !important;
+		margin-top: 55px;
+	}
+
+	.navigation_full-page>.navigation__close{
+		display: block;
+	}
+
+	.navigation_full-page>ul>li{
+		font-size: 2em;
+		display: block;
+		width: 137px;
+		margin: 10px auto !important;
 	}
 
 

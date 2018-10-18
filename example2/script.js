@@ -2,35 +2,35 @@
 
 var bar = document.getElementById('navigation__bar');
 var close = document.getElementById('navigation__close');
-var nav = document.getElementById('navigation__ul');
+var nav = document.getElementById('navigation');
 var body = document.getElementById('body');
 
 bar.ontouchstart = function(e){
-	e.preventDefault()
-	this.onclick()
+	e.preventDefault();
+	e.target.onclick()
 }
 
 bar.onclick = function (e){
-	nav.classList.add("navigation__ul_full-page");
+	nav.classList.add("navigation_full-page");
 	body.style.overflow = "hidden";
 }
 
 function closeNav(e){
-	body.style.overflow = "auto"
-	nav.classList.remove("navigation__ul_full-page");
+	body.style.overflow = "auto";
+	nav.classList.remove("navigation_full-page");
 }
 
 close.onclick = closeNav;
 
 close.ontouchstart = function(e){
 	e.preventDefault();
-	this.onclick()
+	e.target.onclick()
 }
 
-for (var i = 0; i < nav.children.length; i++) {
+var liArray = nav.getElementsByClassName('navigation__li_mobile');
 
-	nav.children[i].onclick = closeNav;
-
+for (var i = 0 ; i < liArray.length; i++) {
+	liArray[i].onclick = closeNav;
 }
 
 
