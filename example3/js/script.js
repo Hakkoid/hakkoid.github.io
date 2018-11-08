@@ -38,7 +38,7 @@ leftArrow.on('click', function(){
 		return
 	}
 
-	slider.animate({left: - slideNumber * elemWidth - elemWidth + "px"}, 1000);
+	slider.animate({left: - slideNumber * elemWidth - elemWidth + "px"}, 500);
 	slideNumber++;
 
 })
@@ -53,6 +53,6 @@ rightArrow.on('click', function(){
 		return
 	}
 
-	slider.animate({left: - slideNumber * elemWidth + elemWidth + "px"}, 1000);
+	slider.animate({left: - slideNumber * elemWidth + elemWidth + "px"}, 500);
 	slideNumber--;
 })
