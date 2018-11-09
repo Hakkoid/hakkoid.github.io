@@ -29,7 +29,7 @@ var leftArrow = $("#quotes__left"),
 	slideNumber = 0;
 
 
-leftArrow.on('click', function(){
+rightArrow.on('click', function(){
 	var slider = $("#quotes__slider-wrapper");
 	var elemWidth = slider.children()[0].clientWidth;
 	var length = slider.children().length;
@@ -44,7 +44,7 @@ leftArrow.on('click', function(){
 })
 
 
-rightArrow.on('click', function(){
+leftArrow.on('click', function(){
 	var slider = $("#quotes__slider-wrapper");
 	var elemWidth = slider.children()[0].clientWidth;
 	var length = slider.children().length;
