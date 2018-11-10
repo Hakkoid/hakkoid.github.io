@@ -199,6 +199,7 @@ directory.nav.graphic.on('click', function(){
 })
 
 directory.arrow = $('#directory__arrow');
+directory.arrow.data("toggle", "false");
 
 directory.arrow.on('click', function(){
 	var arrow = directory.arrow;
