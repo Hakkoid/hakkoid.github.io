@@ -56,3 +56,163 @@ leftArrow.on('click', function(){
 	slider.animate({left: - slideNumber * elemWidth + elemWidth + "px"}, 500);
 	slideNumber--;
 })
+
+var directory = {};
+directory.container = $("#directory__container");
+
+directory.getHtml = function(item){
+	return (
+		'<div class="col-sm-6 col-lg-4"><div class="directory__item"><div></div><div><h3>' + 
+		item.title + '</h3><p>' + 
+		item.description + '</p></div></div></div>'
+	);
+}
+
+directory.data = [
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.',
+	},
+	{
+		type: 'photo',
+		title: 'PHOTOGRAPHY',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'graphic',
+		title: 'GRAPHIC DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'graphic',
+		title: 'GRAPHIC DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'photo',
+		title: 'PHOTOGRAPHY',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+	,
+	{
+		type: 'web',
+		title: 'WEB DESIGN',
+		description: 'Eum cu tantas legere complectitur, hinc utamur ea eaum cu tantas legere complectitur.'
+	}
+
+];
+
+directory.render = function(options){
+	var data = this.data;
+	var html = '';
+
+	var options = options || {};
+
+	options.type = options.type || 'all';
+
+	if (options.type !== 'all'){
+		for (var i in data){
+			if (data[i].type == options.type) {
+				html += this.getHtml(data[i]);
+			}
+		}
+	} else{
+
+		for (var i in data){
+			html += this.getHtml(data[i]);
+		}
+	}
+
+	directory.container.html(html);
+}
+
+directory.render();
+
+directory.nav = {};
+directory.nav.all = $('#directory__all');
+directory.nav.web = $('#directory__web');
+directory.nav.photo = $('#directory__photo');
+directory.nav.graphic = $('#directory__graphic');
+directory.nav.selected = directory.nav.all;
+
+directory.nav.setSelect = function(select){
+
+	directory.nav.selected.removeClass("directory__li_selected");
+
+	directory.nav[select].addClass("directory__li_selected");
+	directory.nav.selected = directory.nav[select];
+
+}
+
+directory.nav.all.on('click', function(){
+	directory.nav.setSelect('all');
+	directory.render({type: 'all'})
+})
+
+directory.nav.web.on('click', function(){
+	directory.nav.setSelect('web');
+	directory.render({type: 'web'})
+})
+
+directory.nav.photo.on('click', function(){
+	directory.nav.setSelect('photo');
+	directory.render({type: 'photo'})
+})
+
+directory.nav.graphic.on('click', function(){
+	directory.nav.setSelect('graphic');
+	directory.render({type: 'graphic'})
+})
+
+directory.arrow = $('#directory__arrow');
+
+directory.arrow.on('click', function(){
+	var arrow = directory.arrow;
+
+	if(arrow.data("toggle") === "false"){
+		arrow.data("toggle", "true");
+		arrow.addClass("directory__arrow_toggled");
+		directory.container.addClass("directory__container_full")
+	} else{
+		arrow.data("toggle", "false");
+		arrow.removeClass("directory__arrow_toggled");
+		directory.container.removeClass("directory__container_full")
+	}
+
+})
+
+

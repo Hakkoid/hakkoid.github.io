@@ -350,7 +350,14 @@ section{
 	color: rgb(255, 255, 255);
 }
 
+.directory__container{
+	max-height: 802px;
+	overflow: hidden;
+}
 
+.directory__container_full{
+	max-height: none;
+}
 
 .directory__item{
 	background-color: #232e3d;
@@ -394,11 +401,20 @@ section{
 @media (max-width: 575.98px) {
 	.directory__select{
 		display: block;
+		margin-top: 30px;
 	}
 
  	.directory__item>div:last-child>p{
 		margin: 10px auto;
 		max-width: none;
+	}
+	
+	.directory{
+		margin-top: 30px;
+	}
+
+	.directory__li{
+		margin: 20px 0;
 	}
 } 
 
@@ -406,11 +422,15 @@ section{
 	overflow: hidden;
 	background-color: transparent;
 	border: none;
-	margin: 25px auto;
+	margin: 25px auto 71px;
 	display: block;
 	width: 45px;
 	height: 45px;
 	padding: 0;
+}
+
+.directory__arrow_toggled{
+	transform: rotate(180deg);
 }
 
 .stats{
@@ -730,7 +750,14 @@ section{
 	margin-top: 88px;
 	color: rgb(255,255,255);
 	font-size: 0.95rem;
-	padding: 15px 28px;
+	padding: 13px 28px;
+	transition: height 0.5s ease-in-out;
+	line-height: 1.5;
+}
+
+.contact__textarea:focus{
+	height: 300px;
+	transition: height 0.5s ease-in-out;
 }
 
 .contact__input::placeholder, .contact__textarea::placeholder{
