@@ -352,6 +352,7 @@ section{
 
 .directory__container{
 	max-height: 802px;
+	min-height: 802px;
 	overflow: hidden;
 }
 
