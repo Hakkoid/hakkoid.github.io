@@ -437,6 +437,7 @@ section{
 .stats{
   background-color: rgb(35, 53, 55);
   min-height: 340px;
+  overflow: hidden;
 }
 
 .stats__icon{
@@ -510,6 +511,7 @@ section{
 	background-image: -webkit-linear-gradient( -89.706deg, rgb(255,108,84) 1%, rgb(255,43,89) 99%);
 	background-image: -ms-linear-gradient( -89.706deg, rgb(255,108,84) 1%, rgb(255,43,89) 99%);
 	min-height: 370px;
+	overflow: hidden;
 }
 
 .quotes__icon{
@@ -614,6 +616,7 @@ section{
 .newsletter{
 	background-color: rgb(35, 53, 55);
 	min-height: 300px;
+	overflow: hidden;
 }
 
 .newsletter>p {
@@ -790,6 +793,7 @@ section{
 .map{
 	background-color: rgb(35, 46, 61);
 	min-height: 400px;
+	overflow: hidden;
 }
 
 .map__address {
