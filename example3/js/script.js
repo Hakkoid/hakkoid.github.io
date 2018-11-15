@@ -26,35 +26,34 @@ $('.navigation__li_mobile').each(function () {
 
 var leftArrow = $("#quotes__left"),
 	rightArrow = $("#quotes__right"),
-	slideNumber = 0;
+	slideNumber = 0,
+	slider = $("#quotes__slider-wrapper"),
+	elemWidth = slider.children()[0].clientWidth,
+	length = slider.children().length;
 
+
+
+slider.css("width", length * elemWidth + "px")
 
 rightArrow.on('click', function(){
-	var slider = $("#quotes__slider-wrapper");
-	var elemWidth = slider.children()[0].clientWidth;
-	var length = slider.children().length;
 
 	if(-length * elemWidth > - slideNumber * elemWidth - elemWidth - 50){
 		return
 	}
 
-	slider.animate({left: - slideNumber * elemWidth - elemWidth + "px"}, 500);
 	slideNumber++;
-
+	slider.animate({left: - slideNumber * 100 + "%"}, 500);
 })
 
 
 leftArrow.on('click', function(){
-	var slider = $("#quotes__slider-wrapper");
-	var elemWidth = slider.children()[0].clientWidth;
-	var length = slider.children().length;
 
 	if( 0 < - slideNumber * elemWidth + 50){
 		return
 	}
 
-	slider.animate({left: - slideNumber * elemWidth + elemWidth + "px"}, 500);
 	slideNumber--;
+	slider.animate({left: - slideNumber * 100 + "%"}, 500);
 })
 
 var directory = {};
