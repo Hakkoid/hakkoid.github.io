@@ -7,7 +7,7 @@
 	max-width: 320px;
 	display: block;
 	margin: 0 auto;
-	width: 64%;
+	width: 90%;
 	height: auto;
 	overflow: hidden;
 }
@@ -46,6 +46,7 @@
 
 @media (min-width: 768px) {
 	.map-svg{
+		width: 64%;
 		max-width: auto;
 	}
 }
