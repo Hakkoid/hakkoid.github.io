@@ -34,12 +34,12 @@
 }
 
 .map-europe{
-	width: 98%
+	width: 100%
 }
 
 .map-europe__map{
 	margin-top: 20px;
-	width: 100%;
+	width: 98%;
 	display: inline-block;
 }
 
