@@ -7,7 +7,7 @@
 
 
 .find-tender{
-	padding: 20px 45px 36px 23px;
+	padding: 20px 45px 33px 23px;
 
 }
 
@@ -90,3 +90,54 @@
 	font-size: 16px;
 }
 
+.tenders__title{
+	font-size: 24px;
+	font-weight: 600;
+	margin-left: 24px;
+}
+
+.tenders__category{
+	padding: 4px;
+	background-color: #d2e8f6;
+	margin-top: 24px;
+	border-top: 1px solid #828181;
+	border-bottom: 1px solid #828181;
+	height: 32px;
+	text-align: center;
+}
+
+
+.tenders__container{
+	width: 650px;
+	margin: 17px auto;
+}
+
+.tenders__col{
+	width: 49.4%; 
+	display: inline-block;
+	padding: 4px;
+	vertical-align: middle;
+}
+
+.tenders__item{
+	margin-bottom: 23px;
+}
+
+.tenders__link{
+	text-decoration: none;
+	border-bottom: 1px dashed #000000;
+	color: #000000;
+	padding-bottom: 2px;
+	font-size: 14px;
+}
+
+@media( max-width: 670px){
+	.tenders__container{
+		width: 100%;
+		max-width: 287px;
+	}
+
+	.tenders__col{
+		width: 100%;
+	}
+}
