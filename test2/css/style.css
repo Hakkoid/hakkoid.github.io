@@ -5,7 +5,6 @@
 }
 
 
-
 .find-tender{
 	padding: 20px 45px 33px 23px;
 
@@ -157,4 +156,23 @@
 		width: 100%;
 		max-width: 100%;
 	}
+}
+
+#navFoot{
+	margin: 0px auto;
+    width: 86%;
+}
+
+#navFoot>ul:nth-child(2){
+	display: block;
+	margin-bottom: 23px;
+} 
+
+#navFoot>ul>li{
+	display: inline;
+}
+
+
+.footer{
+	background-color: transparent;
 }
