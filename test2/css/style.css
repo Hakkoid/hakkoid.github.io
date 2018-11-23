@@ -14,6 +14,7 @@
 .find-tender__title{
 	font-size: 24px;
 	font-weight: 600;
+	color: #1d1d1d;
 }
 
 .find-tender__form{
@@ -95,6 +96,8 @@
 	font-size: 24px;
 	font-weight: 600;
 	margin-left: 24px;
+	color: #1d1d1d;
+
 }
 
 .tenders__category{
@@ -117,7 +120,6 @@
 	width: 49.4%; 
 	display: inline-block;
 	padding: 4px;
-	vertical-align: middle;
 }
 
 .tenders__item{
