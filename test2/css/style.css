@@ -21,7 +21,8 @@
 	margin: 24px 0px -14px 2px;
 	height: 53px;
 	height: 53px;
-	padding: 6px 10px;
+	padding: 6px 10px 6px 0px;
+    text-align: center;
 }
 
 .find-tender__input{
@@ -39,7 +40,7 @@
 
 .find-tender__input::placeholder {
 	opacity: 1;
-	color: #000000;
+	color: #1d1d1d;
 	transition: color 0.3s;
 }
 
@@ -125,10 +126,16 @@
 
 .tenders__link{
 	text-decoration: none;
-	border-bottom: 1px dashed #000000;
-	color: #000000;
+	border-bottom: 1px dotted #1d1d1d;
+	color: #1d1d1d;
 	padding-bottom: 2px;
 	font-size: 14px;
+}
+
+@media (max-width: 634px){
+	.tenders__title{
+		margin-left: 12px;
+	}
 }
 
 @media( max-width: 670px){
