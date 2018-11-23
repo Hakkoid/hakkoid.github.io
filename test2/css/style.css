@@ -116,14 +116,13 @@
 	margin: 17px auto;
 }
 
-.tenders__col{
-	width: 49.4%; 
-	display: inline-block;
-	padding: 4px;
-}
-
 .tenders__item{
 	margin-bottom: 23px;
+	max-width: 49.4%;
+	width: 49.4%;
+	display: inline-block;
+	padding: 4px;
+	vertical-align: top;
 }
 
 .tenders__link{
