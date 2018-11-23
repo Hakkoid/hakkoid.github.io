@@ -114,15 +114,17 @@
 .tenders__container{
 	width: 650px;
 	margin: 17px auto;
+	overflow: hidden;
 }
 
 .tenders__item{
-	margin-bottom: 23px;
+	margin-bottom: -3px;
 	max-width: 49.4%;
 	width: 49.4%;
 	display: inline-block;
 	padding: 4px;
 	vertical-align: top;
+	float: left;
 }
 
 .tenders__link{
@@ -131,6 +133,7 @@
 	color: #1d1d1d;
 	padding-bottom: 2px;
 	font-size: 14px;
+	line-height: 28px;
 }
 
 @media (max-width: 634px){
@@ -147,5 +150,6 @@
 
 	.tenders__item{
 		width: 100%;
+		max-width: 100%;
 	}
 }
