@@ -40,6 +40,7 @@
 
 .logo>span{
 	display: inline-block;
+	perspective: 1.5em;
 }
 
 
