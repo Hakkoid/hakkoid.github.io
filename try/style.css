@@ -4,7 +4,7 @@
 }
 
 .menu{
-	margin: 100px auto;
+	margin: 50px auto;
 	width: 300px
 }
 
@@ -89,3 +89,68 @@ p{
 }
 
 /*84CCD0*/
+
+
+.wrap{
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+	transition: box-shadow 0.3s 0.05s;
+	box-shadow:  inset 0px 0px 0px 0px #84CCD0;
+}
+
+.a2{
+	display: inline-block;
+	margin: 4px 10px;
+	cursor: pointer;
+}
+
+
+.a2:hover>.wrap{
+	box-shadow:  inset 0px 0px 200px 0px #84CCD0;
+}
+
+
+p{
+	transition: color 0.15s 0.05s;
+	margin: 6px 15px;
+	color: #84CCD0;
+}
+
+.a2:hover p{
+	color: #fff;
+}
+
+.wrap3{
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	border-radius: 5px;
+	transition: transform 0.5s 0.05s, background-color 0.5s 0.05s;
+}
+
+.a3{
+	display: inline-block;
+	margin: 4px 10px;
+	cursor: pointer;
+}
+
+
+.a3:hover>.wrap3{
+	transform: rotate(720deg);
+	background-color: #84CCD0;
+}
+
+
+p{
+	transition: color 0.5s 0.05s;
+	margin: 6px 15px;
+	color: #84CCD0;
+}
+
+.a3:hover p{
+	color: #fff;
+}
