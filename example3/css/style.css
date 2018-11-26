@@ -54,6 +54,7 @@ section{
 }
 
 .navigation__bar{
+	cursor: pointer;
 	float: left;
 	border: none;
 	line-height: 0.9;

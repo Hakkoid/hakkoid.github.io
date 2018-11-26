@@ -4,6 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ZOOM</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 	<header>
@@ -323,24 +326,6 @@
 	<footer class="footer">
 		<p class="footer__right">© 2017 - <span>Zoom</span> All Right Reserved</p>
 	</footer>
-	<noscript id="deferred-styles">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</noscript>
-	<script>
-		var loadDeferredStyles = function() {
-			var addStylesNode = document.getElementById("deferred-styles");
-			var replacement = document.createElement("div");
-			replacement.innerHTML = addStylesNode.textContent;
-			document.body.appendChild(replacement)
-			addStylesNode.parentElement.removeChild(addStylesNode);
-		};
-		var raf = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
-				window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-		if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
-		else window.addEventListener('load', loadDeferredStyles);
-	</script>
 	<script defer src="js/jquery-3.3.1.min.js"></script>
 	<script defer src="js/script.js"></script>
 </body>
