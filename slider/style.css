@@ -1,0 +1,45 @@
+.slider{
+	overflow: hidden;
+	max-width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.slider__wrapper{
+	position: relative;
+	font-size: 0px;
+}
+
+.slider__slide{
+	vertical-align: middle;
+	text-align: center;
+	display: inline-block;
+	width: 700px;
+	max-width: 700px;
+	font-size: 1rem;
+}
+
+.slider__navigation{
+	width: 200px;
+	margin: 32px auto;
+}
+
+.slider__navigation>button{
+	border: none;
+	background-color: #f3c362;
+	width: 100px;
+	height: 25px;
+	vertical-align: middle;
+	text-align: center;
+	box-sizing: border-box;
+	color: #fff;
+	padding: 3px;
+}
+
+.slider__navigation>button:first-child{
+	float: left;
+}
+
+.slider__navigation>button:last-child{
+	float: right;
+}
