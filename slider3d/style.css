@@ -23,21 +23,21 @@
 .slider__navigation{
 	position: absolute;
 	width: 100%;
-	top: 50%;
+	top: 42%;
 }
 
 .slider__navigation>button{
 	border: none;
 	background-color: #f3c362;
 	width: 100px;
-	height: 25px;
+	height: 100px;
 	vertical-align: middle;
 	text-align: center;
 	box-sizing: border-box;
 	color: #fff;
 	padding: 3px;
 	margin-top: 20px;
-	border-radius: 20px;
+	border-radius: 50%;
 	transition: color 0.4s, background-color 0.2s;
 }
 
