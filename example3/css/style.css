@@ -41,11 +41,13 @@ section{
 	margin-top: 28px;
 	vertical-align: top;
 	display: inline-block;
+	transition: 350ms;
 }
 
 .navigation__ul{
 	justify-content: space-between;
 	padding: 0;
+	transition: 350ms;
 }
 
 .navigation_mobile>button{
@@ -107,6 +109,7 @@ section{
 	box-sizing: border-box;
 	padding-left: 4px;
 	padding-top: 16px;
+	transition: 0.25s;
 }
 
 .navigation__li>a:hover{
@@ -207,6 +210,7 @@ section{
 	width: 250px;
 	height: 70px;
 	display: block;
+	transition: 0.3s;
 }
 
 .link:hover{
@@ -528,7 +532,7 @@ section{
 
 .quotes__slider{
 	overflow: hidden;
-	max-width: 700px;
+	max-width: 1000px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -542,8 +546,8 @@ section{
 .quotes__slide{
 	vertical-align: middle;
 	display: inline-block;
-	width: 700px;
-	max-width: 700px;
+	width: 1000px;
+	max-width: 1000px;
 }
 
 .quotes__text{
@@ -618,6 +622,29 @@ section{
 	background-color: rgb(35, 53, 55);
 	min-height: 300px;
 	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+
+.newsletter__swap{
+	bottom: 0px;
+	left: 0px;
+	height: 100%;
+	width: 0%;
+	position: absolute;
+	display: block;
+	z-index: -1;
+	transition: 0.6s;
+	background-color: #ff2c59;
+}
+
+.newsletter__swap_right{
+	right: 0px;
+	left: auto;
+}
+
+.newsletter:hover>.newsletter__swap{
+	width: 50%;
 }
 
 .newsletter>p {
@@ -687,6 +714,24 @@ section{
 	color: rgb(255, 255, 255);
 }
 
+.design__phone:hover{
+		animation: design__phone_shake 0.3s;
+}
+
+@keyframes design__phone_shake {
+    from {
+    	transform: rotate(0deg);
+    }
+    33%{
+    	transform: rotate(-3deg)
+    }
+    66%{
+		transform: rotate(3deg)
+    }
+    to {
+    	transform: rotate(0deg);
+    }
+}
 
 @media (max-width: 767.98px){
 	.design__title{
@@ -706,6 +751,12 @@ section{
 	background-image: -ms-linear-gradient( -66.727deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
 	height: 220px;
 	margin-top: 74px;
+	transition: 0.3s;
+}
+
+.clients__client:hover{
+	transform: translate(-5px, -5px);
+	box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.3);
 }
 
 .clients__client>h3{

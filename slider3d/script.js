@@ -8,7 +8,7 @@ function initSlider(){
 		length = wrapper.children().length,
 		width = wrapper.width();
 
-	view.css("perspective", wrapper.width * length * 2);
+	view.css("perspective", 270 * length * 2);
 
 	$.each(slides, function(index, value){
 		$(this).css("transform", "rotateY(" + index * 360 / length + "deg)" + 
