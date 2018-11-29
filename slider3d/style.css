@@ -82,33 +82,49 @@ body{
 }
 
 .slider__slide{
-	border-radius: 20px;
 	line-height: initial;
 	height: 100%;
 	width: 100%;
 	position: absolute;
-	background-color: #ffffff;
 	transform: translateZ(200px);
 	font-size: 15px;
-	padding: 15px;
 	box-sizing: border-box;
-	box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.3);
 	transition: height 0.5s 0.1s, margin 0.5s 0.1s, width 0.5s 0.1s;
 }
 
-.slider__slide:hover{
+.content:hover{
 	height: 300px;
 	margin-top: -100px;
 	width: 200%;
 	margin-left: -50%;
+	border: 2px solid #fff;
 }
 
-.yellow{
+.content{
+	box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.3);
+	transition: height 0.5s 0.1s, margin 0.5s 0.1s, width 0.5s 0.1s, border 0.5s 0.1s;
 	font-size: 20px;
-	border-radius: 10px;
+	border-radius: 20px;
 	color: #ffffff;
 	background-color: #f3c362;
+	width: 100%;
 	height: 100%;
 	padding: 20px;
 	overflow: hidden;
+	border: 9px solid #fff;
+}
+
+.content>h2{
+	margin: 5px;
+}
+
+.content>p{
+	margin-left: -35%;
+	width: 170%;
+	transition: 0.5s 0.1s;
+}
+
+.content:hover>p{
+	width: 100%;
+	margin-left: 0px;
 }
