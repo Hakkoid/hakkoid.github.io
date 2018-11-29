@@ -3,37 +3,48 @@ function initSlider(options){
 		right = $("#slider__right"),
 		wrapper = $("#slider__wrapper"),
 		length = wrapper.children().length,
-		slides = $(".slider__slide"),
-		number = (options.startSlide >= length ?  0 : options.startSlide) || 0;
+		slides = $(".slider__slide");
+
+	// --- Init options --- //
+
+	var	options = options || {};
+		number = (options.startSlide >= length ?  0 : options.startSlide) || 0,
+		options.autoScroll = options.autoScroll || false;
+
+	// ---------------- //
 
 	
 	// --- Init dots --- //
 
-	var htmlString = "";
+	if(options.dots == true){
 
-	for(var i = 0; i < length; i++){
-		htmlString += "<button></button>";
-	}
+		var htmlString = "";
 
-	$(".slider__dots").html(htmlString);
+		for(var i = 0; i < length; i++){
+			htmlString += "<button></button>";
+		}
 
-	var dots = $(".slider__dots>button");
+		$(".slider__dots").html(htmlString);
 
-	dots.each(function(index){
-		$(this).data("item-number", index);
-	})
+		var dots = $(".slider__dots>button");
 
-	dots.on('click', function(){
-		$(dots[number]).removeAttr("style");
+		dots.each(function(index){
+			$(this).data("item-number", index);
+		})
 
-		number = $(this).data("item-number");
+		dots.on('click', function(){
+			$(dots[number]).removeAttr("style");
+
+			number = $(this).data("item-number");
+
+			$(dots[number]).css("opacity", "1");
+
+			wrapper.animate({left: - (number + 1) * 100 + "%"}, 500);
+		})
 
 		$(dots[number]).css("opacity", "1");
 
-		wrapper.animate({left: - (number + 1) * 100 + "%"}, 500);
-	})
-
-	$(dots[number]).css("opacity", "1");
+	}
 
 	// ---------------- //
 
@@ -64,31 +75,12 @@ function initSlider(options){
 
 	// --- Init right and left buttons --- //
 
-	right.on('click', function(){
-
-		if( length <= number + 1){
-			wrapper.animate({left: - (number + 2) * 100 + "%"},
-				500,
-				"swing",
-				function(){wrapper.css("left", "-100%" )}
-			);
-			$(dots[number]).removeAttr("style");
-
-			number = 0;
-
-			$(dots[number]).css("opacity", "1");
-			return
-		}
-
-		number++;
-		wrapper.animate({left: - (number + 1) * 100 + "%"}, 500);
-
-		$(dots[number-1]).removeAttr("style");
-		$(dots[number]).css("opacity", "1");
-	})
+	right.on('click', scrollRight)
 
 
-	left.on('click', function(){
+	left.on('click', scrollLeft)
+
+	function scrollLeft(){
 
 		if( 0 > number - 1 ){			
 			wrapper.animate({left: - number * 100 + "%"},
@@ -97,20 +89,93 @@ function initSlider(options){
 				function(){wrapper.css("left", - length * 100 + "%" )}
 			);
 
-			$(dots[number]).removeAttr("style");
+			if(options.dots == true){
+				$(dots[number]).removeAttr("style");
+				number = length - 1;
+				$(dots[number]).css("opacity", "1");
+			}else{
+				number = length - 1;
+			}
 
-			number = length - 1;
-
-			$(dots[number]).css("opacity", "1");
 			return
 		}
 
 		number--;
 		wrapper.animate({left: - (number + 1) * 100 + "%"}, 500);
 
-		$(dots[number+1]).removeAttr("style");
-		$(dots[number]).css("opacity", "1");
-	})
+		if(options.dots == true){
+			$(dots[number+1]).removeAttr("style");
+			$(dots[number]).css("opacity", "1");
+		}
+	}
+
+	function scrollRight(){
+
+		if( length <= number + 1){
+			wrapper.animate({left: - (number + 2) * 100 + "%"},
+				500,
+				"swing",
+				function(){wrapper.css("left", "-100%" )}
+			);
+
+			if(options.dots){
+				$(dots[number]).removeAttr("style");
+				number = 0;
+				$(dots[number]).css("opacity", "1");
+			}else{
+				number = 0;
+			}
+			return
+		}
+
+		number++;
+		wrapper.animate({left: - (number + 1) * 100 + "%"}, 500);
+		if(options.dots){
+			$(dots[number-1]).removeAttr("style");
+			$(dots[number]).css("opacity", "1");
+		}
+	}
+
+	// ---------------- //
+
+
+	// --- Init auto scroll --- //
+
+	if(options.autoScroll == true || typeof options.autoScroll === 'object'){
+		var timerScroll;
+
+		if(!(typeof options.autoScroll === 'object')){
+			options.autoScroll = {};
+		}
+
+		options.autoScroll.delay = options.autoScroll.delay || 4000;
+		options.autoScroll.direction = options.autoScroll.direction || "right";
+
+		function createAutoFunc(delay, direction){
+
+			if(direction === "right"){
+				return function (){scrollRight(); timerScroll = setTimeout(auto, delay)}
+			}else if(direction === "left"){
+				return function (){scrollLeft(); timerScroll = setTimeout(auto, delay)}
+			}
+		}
+
+		var auto = createAutoFunc(options.autoScroll.delay, options.autoScroll.direction);
+
+		timerScroll = setTimeout(auto, options.autoScroll.delay);
+
+
+		// --- Reset time to auto scroll --- //
+		if(options.dots == true){
+			dots.on('click', function(){
+				clearTimeout(timerScroll);
+				timerScroll = setTimeout(auto, options.autoScroll.delay);
+			})
+		}
+		// ---------------- //
+
+	}
+
 }
 
-initSlider({startSlide: 5})
+initSlider({startSlide: 2, autoScroll: {delay: 2000, direction: "left"}, dots: true})
