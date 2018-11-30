@@ -41,13 +41,11 @@ section{
 	margin-top: 28px;
 	vertical-align: top;
 	display: inline-block;
-	transition: 350ms;
 }
 
 .navigation__ul{
 	justify-content: space-between;
 	padding: 0;
-	transition: 350ms;
 }
 
 .navigation_mobile>button{
@@ -109,17 +107,35 @@ section{
 	box-sizing: border-box;
 	padding-left: 4px;
 	padding-top: 16px;
-	transition: color 0.25s, background-image 0.25s;
+	transition: color 0.25s;
 	color: #46d9cd;
+	position: relative;
 }
 
 .navigation__li>a:hover{
-	background-image: -moz-linear-gradient( -90deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
-	background-image: -webkit-linear-gradient( -90deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
-	background-image: -ms-linear-gradient( -90deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
 	color: rgb(255, 255, 255);
 	text-decoration: none;
 	font-weight: 400;
+	z-index: 1;
+}
+
+.navigation__li>a:hover>span{
+	opacity: 1;
+}
+
+.navigation__li>a>span{
+	position: absolute;
+	z-index: -1;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: block;
+	background-image: -moz-linear-gradient( -90deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
+	background-image: -ms-linear-gradient( -90deg, rgb(109,255,198) 1%, rgb(63,210,206) 99%);
+	opacity: 0;
+	transition: 0.25s;
 }
 
 @media (max-width: 767px) {
@@ -217,7 +233,7 @@ section{
 .link:hover{
 	text-decoration: none;
 	color: #fff;
-	box-shadow: 0 12px 26px rgba(0,0,0,0.3);
+	box-shadow: 0 32px 26px -13px rgba(0,0,0,0.3);
 }
 
 .services{

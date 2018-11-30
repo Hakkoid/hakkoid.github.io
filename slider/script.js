@@ -166,16 +166,25 @@ function initSlider(options){
 
 
 		// --- Reset time to auto scroll --- //
-		if(options.dots == true){
-			dots.on('click', function(){
-				clearTimeout(timerScroll);
-				timerScroll = setTimeout(auto, options.autoScroll.delay);
-			})
+
+		function resetAutoScrolling(){
+			clearTimeout(timerScroll);
+			timerScroll = setTimeout(auto, options.autoScroll.delay);
 		}
+
+		if(options.dots == true){
+			dots.on('click', resetAutoScrolling)
+		}
+		
+		right.on('click', resetAutoScrolling)
+
+
+		left.on('click', resetAutoScrolling)
+
 		// ---------------- //
 
 	}
 
 }
 
-initSlider({startSlide: 2, autoScroll: {delay: 2000, direction: "left"}, dots: true})
+initSlider({startSlide: 2, autoScroll: {delay: 5000, direction: "right"}, dots: true})
