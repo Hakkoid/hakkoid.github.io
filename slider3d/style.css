@@ -89,7 +89,7 @@ body{
 	transform: translateZ(200px);
 	font-size: 15px;
 	box-sizing: border-box;
-	transition: height 0.5s 0.1s, margin 0.5s 0.1s, width 0.5s 0.1s;
+	transition: transform 0.3s;
 }
 
 .content:hover{
