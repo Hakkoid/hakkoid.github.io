@@ -19,20 +19,6 @@ ol, ul {
     list-style: none
 }
 
-blockquote, q {
-    quotes: none
-}
-
-blockquote:after, blockquote:before, q:after, q:before {
-    content: '';
-    content: none
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0
-}
-
 input[type=range] {
     -webkit-appearance: none
 }
@@ -77,50 +63,6 @@ input[type=range].volume-range::-webkit-slider-thumb {
     box-shadow: none
 }
 
-input[type=range].song-range::-moz-range-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 20px;
-    width: 12px;
-    border-radius: 4.5px;
-    background: #d8d8d8;
-    cursor: pointer;
-    box-shadow: none
-}
-
-input[type=range].volume-range::-moz-range-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 26px;
-    background: #605757;
-    cursor: pointer;
-    box-shadow: none
-}
-
-input[type=range].song-range::-ms-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 20px;
-    width: 12px;
-    border-radius: 4.5px;
-    background: #d8d8d8;
-    cursor: pointer;
-    box-shadow: none
-}
-
-input[type=range].volume-range::-ms-thumb {
-    -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 26px;
-    background: #605757;
-    cursor: pointer;
-    box-shadow: none
-}
-
 input[type=range].song-range::-webkit-slider-runnable-track {
     width: 100%;
     height: 1px;
@@ -147,68 +89,6 @@ input[type=range].song-range:focus::-webkit-slider-runnable-track {
 
 input[type=range].volume-range:focus::-webkit-slider-runnable-track {
     background: rgba(216, 216, 216, .3)
-}
-
-input[type=range].song-range::-moz-range-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    box-shadow: none;
-    background: #979797;
-    border-radius: none;
-    border: none
-}
-
-input[type=range].volume-range::-moz-range-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    box-shadow: none;
-    background: rgba(216, 216, 216, .3);
-    border-radius: 2px;
-    border: none
-}
-
-input[type=range].song-range::-ms-track {
-    width: 100%;
-    height: 1px;
-    cursor: pointer;
-    box-shadow: none;
-    background: #979797;
-    border-radius: none;
-    border: none
-}
-
-input[type=range].volume-range::-ms-track {
-    width: 100%;
-    height: 4px;
-    cursor: pointer;
-    box-shadow: none;
-    background: rgba(216, 216, 216, .3);
-    border-radius: 2px;
-    border: none
-}
-
-input[type=range]::-ms-fill-lower {
-    background: #2a6495;
-    border: .2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d
-}
-
-input[type=range]:focus::-ms-fill-lower {
-    background: #3071a9
-}
-
-input[type=range]::-ms-fill-upper {
-    background: #3071a9;
-    border: .2px solid #010101;
-    border-radius: 2.6px;
-    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d
-}
-
-input[type=range]:focus::-ms-fill-upper {
-    background: #367ebd
 }
 
 body, html {
@@ -309,11 +189,6 @@ footer {
     grid-row: span 3
 }
 
-.card_size_c {
-    grid-column: span 3;
-    grid-row: span 2
-}
-
 .card {
     background: url("../img/cbg.jpg");
     color: #333;
@@ -326,174 +201,7 @@ footer {
     color: #fff;
     padding: 0
 }
-.logo {
-    display: inline-block;
-    width: 108px;
-    height: 27px;
-    position: relative;
-    background-image: url("./assets/logo.png");
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-size: cover;
-}
-.logo__ya {
-    display: block;
-    position: absolute;
-    z-index: 10;
-    outline: 0;
-    height: 100%;
-    width: 69px;
-    left: 0;
-    top: 0;
-}
-.logo__ya-sub {
-    display: block;
-    position: absolute;
-    z-index: 5;
-    outline: 0;
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
-.main {
-    height: 331px;
-    border-radius: 20px;
-    padding: 0 20px 0 25px;
-    display: flex;
-    justify-content: space-between;
-    background: url("assets/sh.png") center center/cover no-repeat;
-}
-.main__greeting {
-    margin-top: 6px;
-    font-size: 27px;
-    font-weight: 700;
-}
-.main__info {
-    width: 61.585%;
-    padding-top: 20px;
-    padding-left: 20px;
-    background: rgba(255,255,255,0.6);
-}
-.main__panel {
-    margin-bottom: 14px;
-    position: relative;
-}
-.main__status {
-    margin-top: 6px;
-    line-height: 16px;
-}
-.main__upcoming {
-    width: 220px;
-    height: 100%;
-    overflow-y: scroll;
-}
-.main__upcoming-wrapper {
-    width: 200px;
-    height: 100%;
-    overflow: hidden;
-}
-.main__weather {
-    margin-top: 25px;
-}
-.menu {
-    margin-left: 52px;
-}
-.menu__icon {
-    display: none;
-}
-.menu__item {
-    margin-right: 27px;
-    font-size: 16px;
-    font-weight: 700;
-}
-.menu__list {
-    display: flex;
-    justify-content: flex-start;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.modal {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgba(51, 51, 51, 0.5);
-}
-.modal_open {
-    display: flex;
-}
-.modal_open .modal__content {
-    animation: modal 0.2s ease forwards;
-}
-.modal__title {
-    font-size: 27px;
-    font-weight: 700;
-    margin-bottom: 6px;
-}
-.modal__value {
-    box-sizing: content-box;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 36px;
-    font-weight: 700;
-    max-width: 62px;
-    height: 40px;
-    padding-right: 32px;
-}
-.modal__value_temp {
-    background: url("assets/panel__icon_temp_on.svg") calc(100% + 10px) 0%/contain no-repeat;
-}
-.modal__value_light {
-    height: 45px;
-    padding-right: 45px;
-    background: url("assets/panel__icon_light_off.svg") right center/contain no-repeat;
-}
-.modal__status {
-    margin-bottom: 20px;
-}
-.modal__adjust {
-    margin-top: 25px;
-}
-.modal__button {
-    width: 48.5%;
-}
-.modal__content {
-    max-width: 640px;
-    width: 100%;
-}
-.modal__body {
-    position: relative;
-    flex-shrink: 0;
-    padding: 25px;
-    margin-bottom: 15px;
-    border-radius: 20px;
-    background: #fff;
-}
-.modal__controls {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-@keyframes modal {
-    from {
-        transform: scale(0.2);
-    }
-to-transform: scale(1);
-}
-* {
-    box-sizing: border-box;
-}
+
 html {
     height: 100%;
 }
