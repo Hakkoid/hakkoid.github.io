@@ -24102,46 +24102,7 @@ document.querySelectorAll('.modal_close').forEach(b => {
     }
 });
 
-const TEMPS = {
-    'manual': -10,
-    'cold': 0,
-    'warm': 23,
-    'hot': 30
-}
-
-document.querySelectorAll('.modal__filter-item_temp').forEach(l => {
-    l.onclick = function() {
-        document.querySelector('.adjust-bar_theme_temp').value = TEMPS[this.id];
-        document.querySelector('.modal_temp .modal__value').innerHTML = TEMPS[this.id] > 0 ? '+' + TEMPS[this.id] : TEMPS[this.id];
-    }
-});
-
-const showModal = function(selector) {
-    document.querySelector(selector).classList.toggle('modal_open', true);
-    document.querySelector('body').style.overflow = 'hidden';
-}
-
-
-document.querySelectorAll('.panel_lamp').forEach(p => {
-    p.onclick = function() {
-        showModal('.modal_light');
-    }
-});
-
-document.querySelectorAll('.panel_floor').forEach(p => {
-    p.onclick = function() {
-        showModal('.modal_knob');
-    }
-});
-
 document.addEventListener("DOMContentLoaded", function () {
-    // $('.card').each(function(e) {
-    //     if ($(this).hasClass('card_size_s')) {
-    //         $(this).css({'border-radius': '22px'})
-    //     } else {
-    //         $(this).css({'border-radius': '23px'})
-    //     }
-    // });
     var waterContainer = document.querySelector('.card.card_size_s:last-child');
 
     waterContainer.innerHTML = 
@@ -24158,23 +24119,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
-const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
-const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
-const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
-const pageCountScens = document.querySelectorAll('.scenarios__page').length;
-const scenarios = document.querySelector('.scenarios');
-const pagiantorScens = document.querySelector('.scenarios__paginator');
 let currentPage = 1;
-
-
-
-
-const selectButton = document.querySelector('.filter__select-button');
-const selectButtonText = document.querySelector('.filter__select-button .button__text');
-const selectOptions = document.querySelectorAll('.filter__select-item');
-const popup = document.querySelector('.filter__select-popup');
-
 
 
 let widths = '';
@@ -24182,19 +24127,6 @@ window.addEventListener('scroll', function() {
     widths += document.querySelectorAll('body')[0].offsetWidth;
 
 });
-
-selectOptions.forEach(o => {
-    o.addEventListener('click', function(e) {
-        document.querySelector('#' + e.target.dataset.group).checked = true;
-
-        selectOptions.forEach(opt => opt.classList.toggle('filter__select-item_checked', false));
-        e.target.classList.toggle('filter__select-item_checked', true);
-        popup.classList.toggle('filter__select-popup_open', false);
-        selectButtonText.innerText = e.target.innerText;
-    })
-});
-
-
 
 var storage
 
