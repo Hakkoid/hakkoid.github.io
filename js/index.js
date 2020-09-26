@@ -1,1 +1,0 @@
-window.addEventListener("DOMContentLoaded",()=>{const a=document.createElement("script");a.setAttribute("src","./js/multimedia.js");const b=document.querySelector(".buttons-wrap");b.innerHTML="<button class=\"button button_yellow\" type=\"button\">\u0414\u0430</button><button class=\"button\">\u041D\u0435\u0442</button>",document.querySelector(".multimedia").appendChild(a)});

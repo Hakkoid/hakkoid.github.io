@@ -1,1 +1,0 @@
-;(function(a,b,d){var e=b.createElement("script");e.src="//zen.yandex.ru/widget-loader",b.head.appendChild(e);var f=b.createElement("div");f.style.display="none",b.body.appendChild(f),a[d]=a[d]||[],a[d].push(function(){a.YandexZen.renderWidget({container:f,clid:[123,123]})})})(window,document,"yandexZenAsyncCallbacks");
