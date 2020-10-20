@@ -1,6 +1,26 @@
 @font-face {
   font-family: Oswald;
-  src: url(oswald.ttf); }
+  font-style: normal;
+  font-weight: 300;
+  src: url(Oswald-VariableFont_wght.ttf); }
+
+@font-face {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 700;
+  src: url(Oswald-VariableFont_wght.ttf); }
+
+@font-face {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 400;
+  src: url(Oswald-VariableFont_wght.ttf); }
+
+@font-face {
+  font-family: "Century Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src: url(CenturyGothic.ttf); }
 
 html,
 body {
@@ -13,20 +33,27 @@ body {
 * {
   box-sizing: border-box; }
 
-.link {
-  text-decoration: none; }
-  .link:visited {
-    color: #E7E7E9; }
-  .link:hover {
-    text-decoration: underline; }
+.header {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  justify-content: space-between;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  z-index: 50;
+  transform: translateX(-50%);
+  background: #0D1321; }
 
-@use "sass:color";
 .image-box {
-  position: relative; }
+  position: relative;
+  display: flex; }
+  .image-box__img {
+    height: auto;
+    width: 100%; }
   .image-box__shadow {
-    box-shadow: inset 0px 20px 80px 20px #0D1321, inset 0px -20px 80px 20px #0D1321, inset 40px 0px 160px 20px #0D1321, inset -40px 0px 160px 20px #0D1321;
     position: absolute;
-    background: rgba(13, 19, 33, 0.2);
+    background: linear-gradient(90deg, #0D1321 0%, rgba(13, 19, 33, 0) 30%), linear-gradient(-90deg, #0D1321 0%, rgba(13, 19, 33, 0) 30%), linear-gradient(180deg, #0D1321 0%, rgba(13, 19, 33, 0) 40px), linear-gradient(0deg, #0D1321 0%, rgba(13, 19, 33, 0) 40px), rgba(13, 19, 33, 0.2);
     top: 0;
     right: 0;
     left: 0;
@@ -57,16 +84,9 @@ body {
       top: auto;
       bottom: 3px; }
 
-.header {
-  display: flex;
-  align-items: center;
-  height: 100px;
-  justify-content: space-between;
-  position: fixed;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  background: #0D1321; }
+.logo {
+  height: 60px;
+  width: auto; }
 
 .main {
   margin-top: 100px; }
@@ -84,6 +104,18 @@ body {
   .nav__item + .nav__item {
     margin-left: 40px; }
 
+.link {
+  text-decoration: none;
+  color: #E7E7E9;
+  transition: color 300ms; }
+  .link:visited {
+    color: #E7E7E9; }
+  .link:hover {
+    color: #FFBA49; }
+
+.region {
+  width: 160px; }
+
 .page-content {
   margin-left: auto;
   margin-right: auto;
@@ -92,7 +124,8 @@ body {
 
 .radio-buttons {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-family: "Century Gothic"; }
   .radio-buttons__label {
     flex: 1;
     text-align: center;
@@ -101,9 +134,14 @@ body {
     border-right: none;
     font-size: 13px;
     line-height: 20px;
-    padding: 5px 12px;
+    padding: 4px 12px;
     opacity: 0.4;
-    cursor: pointer; }
+    cursor: pointer;
+    transition: opacity 300ms, box-shadow 300ms, background-color 300ms;
+    background: transparent;
+    box-shadow: 0px 0px 20px transparent; }
+    .radio-buttons__label:hover {
+      opacity: 1; }
     .radio-buttons__label:first-of-type {
       border-radius: 3px 0px 0px 3px; }
     .radio-buttons__label:last-of-type {
@@ -115,8 +153,6 @@ body {
     width: 1px;
     height: 1px;
     margin: -1px; }
-  .radio-buttons__input:focus + .radio-buttons__label {
-    outline: -webkit-focus-ring-color auto 1px; }
   .radio-buttons__input:checked + .radio-buttons__label {
     opacity: 1;
     background: rgba(231, 231, 233, 0.4);
@@ -124,8 +160,3 @@ body {
     border: solid 1px #E7E7E9; }
   .radio-buttons__input:checked + .radio-buttons__label + .radio-buttons__input + .radio-buttons__label {
     border-left: none; }
-
-.logo {
-  height: 60px;
-  width: auto; }
-
